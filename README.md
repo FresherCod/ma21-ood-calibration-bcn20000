@@ -54,6 +54,8 @@ Notes:
 - Code: MIT (see `LICENSE`).
 - Results and analysis outputs: CC BY 4.0. The source datasets have their own licences; check them before reuse.
 
-## Citation
+## Archive and citation
 
-To be added after publication.
+The v1.0.0 archive is deposited on Zenodo: https://doi.org/10.5281/zenodo.23723362 (concept DOI https://doi.org/10.5281/zenodo.23723361 covers all versions).
+
+Trương Đình Phúc (2026). *Pre-registered far-OOD evaluation on BCN20000: code, per-seed results, and analysis outputs* (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.23723362
