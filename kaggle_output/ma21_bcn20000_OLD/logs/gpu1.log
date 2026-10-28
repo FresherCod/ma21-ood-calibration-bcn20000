@@ -1,0 +1,76 @@
+Đã giải nén trên máy: /tmp/ma21_local/train
+device: cuda | torch: 2.11.0+cu128 | holdout: ['AK'] | seeds: [1]
+checkpoint: /kaggle/working/ma21_bcn20000/checkpoints | kết quả: /kaggle/working/ma21_bcn20000/outputs
+Đọc và thu nhỏ 12413 ảnh về 256 px vào RAM...
+  đã xong 2000
+  đã xong 4000
+  đã xong 6000
+  đã xong 8000
+  đã xong 10000
+  đã xong 12000
+Xong trong 109s, RAM ~2.44 GB
+Đã đưa ảnh lên cuda: 2.44 GB uint8
+seed 1: train 8296, val 1088, id_test 2292, ood 737, lớp ID ['BCC', 'BKL', 'DF', 'MEL', 'NV', 'SCC', 'VASC']
+Downloading: "https://download.pytorch.org/models/efficientnet_b0_rwightman-7f5810bc.pth" to /root/.cache/torch/hub/checkpoints/efficientnet_b0_rwightman-7f5810bc.pth
+  0%|          | 0.00/20.5M [00:00<?, ?B/s] 35%|███▍      | 7.12M/20.5M [00:00<00:00, 74.7MB/s]100%|██████████| 20.5M/20.5M [00:00<00:00, 124MB/s] 
+  epoch 00 train_loss 1.3168 val_nll 1.2254 (58.2s) | GPU đỉnh 5.06 GiB
+  epoch 01 train_loss 0.8058 val_nll 1.3245 (21.3s) | GPU đỉnh 5.06 GiB
+  epoch 02 train_loss 0.5514 val_nll 1.0864 (22.0s) | GPU đỉnh 5.06 GiB
+  epoch 03 train_loss 0.3989 val_nll 1.2424 (23.0s) | GPU đỉnh 5.06 GiB
+  epoch 04 train_loss 0.3153 val_nll 1.1773 (25.0s) | GPU đỉnh 5.06 GiB
+  epoch 05 train_loss 0.2438 val_nll 1.1751 (24.6s) | GPU đỉnh 5.06 GiB
+  dừng sớm
+  best epoch 2
+  temperature T = 1.3611
+  đã lưu chi tiết vào /kaggle/working/ma21_bcn20000/outputs/seed1
+  ID test (sau TS): {'acc': 0.6466, 'bal_acc': 0.6156, 'nll': 0.9718, 'brier': 0.4951, 'ece': 0.0459}
+  OOD (AUROC, FPR95): {'msp_raw': (0.5974, 0.9349), 'msp_ts': (0.6039, 0.9267), 'energy_raw': (0.6307, 0.9199), 'energy_ts': (0.6317, 0.9145), 'mc_msp': (0.6054, 0.9267)}
+                         0
+seed              1.000000
+T                 1.361064
+best_epoch        2.000000
+raw_acc           0.646597
+raw_bal_acc       0.615595
+raw_nll           1.009301
+raw_brier         0.505025
+raw_ece           0.089109
+ts_acc            0.646597
+ts_bal_acc        0.615595
+ts_nll            0.971814
+ts_brier          0.495148
+ts_ece            0.045926
+auroc_msp_raw     0.597403
+fpr95_msp_raw     0.934871
+auroc_msp_ts      0.603918
+fpr95_msp_ts      0.926730
+auroc_energy_raw  0.630668
+fpr95_energy_raw  0.919946
+auroc_energy_ts   0.631728
+fpr95_energy_ts   0.914518
+auroc_mc_msp      0.605440
+fpr95_mc_msp      0.926730
+
+Trung bình ± độ lệch chuẩn qua các seed:
+                      mean  std
+T                 1.361064  NaN
+best_epoch        2.000000  NaN
+raw_acc           0.646597  NaN
+raw_bal_acc       0.615595  NaN
+raw_nll           1.009301  NaN
+raw_brier         0.505025  NaN
+raw_ece           0.089109  NaN
+ts_acc            0.646597  NaN
+ts_bal_acc        0.615595  NaN
+ts_nll            0.971814  NaN
+ts_brier          0.495148  NaN
+ts_ece            0.045926  NaN
+auroc_msp_raw     0.597403  NaN
+fpr95_msp_raw     0.934871  NaN
+auroc_msp_ts      0.603918  NaN
+fpr95_msp_ts      0.926730  NaN
+auroc_energy_raw  0.630668  NaN
+fpr95_energy_raw  0.919946  NaN
+auroc_energy_ts   0.631728  NaN
+fpr95_energy_ts   0.914518  NaN
+auroc_mc_msp      0.605440  NaN
+fpr95_mc_msp      0.926730  NaN

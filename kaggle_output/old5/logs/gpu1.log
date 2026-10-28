@@ -1,0 +1,51 @@
+Đã giải nén trên máy: /tmp/ma21_local/train
+device: cuda | torch: 2.11.0+cu128 | holdout: ['AK'] | seeds: [1, 3]
+checkpoint: /kaggle/working/ma21_bcn20000/v3/checkpoints | kết quả: /kaggle/working/ma21_bcn20000/v3/outputs
+Đọc và thu nhỏ 12413 ảnh về 256 px vào RAM...
+  đã xong 2000
+  đã xong 4000
+  đã xong 6000
+  đã xong 8000
+  đã xong 10000
+  đã xong 12000
+Xong trong 115s, RAM ~2.44 GB
+far-OOD retinamnist_224: 400 ảnh (từ /tmp/ma21_local/far/retinamnist_224.npz)
+far-OOD pneumoniamnist_224: 624 ảnh (từ /tmp/ma21_local/far/pneumoniamnist_224.npz)
+far-OOD breastmnist_224: 156 ảnh (từ /tmp/ma21_local/far/breastmnist_224.npz)
+Đã đưa ảnh lên cuda: 2.44 GB uint8
+seed 1: train 8230, val 1177, id_test 2269, ood 737, lớp ID ['BCC', 'BKL', 'DF', 'MEL', 'NV', 'SCC', 'VASC']
+Downloading: "https://download.pytorch.org/models/efficientnet_b0_rwightman-7f5810bc.pth" to /root/.cache/torch/hub/checkpoints/efficientnet_b0_rwightman-7f5810bc.pth
+  0%|          | 0.00/20.5M [00:00<?, ?B/s] 61%|██████    | 12.4M/20.5M [00:00<00:00, 129MB/s]100%|██████████| 20.5M/20.5M [00:00<00:00, 152MB/s]
+  epoch 00 train_loss 1.3615 val_nll 1.0690 (59.6s) | GPU đỉnh 5.28 GiB
+  epoch 01 train_loss 0.8012 val_nll 1.0169 (20.2s) | GPU đỉnh 5.28 GiB
+  epoch 02 train_loss 0.5858 val_nll 1.0092 (20.4s) | GPU đỉnh 5.28 GiB
+  epoch 03 train_loss 0.4351 val_nll 0.9392 (20.7s) | GPU đỉnh 5.28 GiB
+  epoch 04 train_loss 0.3524 val_nll 1.0547 (21.1s) | GPU đỉnh 5.28 GiB
+  epoch 05 train_loss 0.2885 val_nll 0.9804 (21.4s) | GPU đỉnh 5.28 GiB
+  epoch 06 train_loss 0.3126 val_nll 1.1501 (21.4s) | GPU đỉnh 5.28 GiB
+  epoch 07 train_loss 0.2090 val_nll 1.0714 (21.1s) | GPU đỉnh 5.28 GiB
+  epoch 08 train_loss 0.1594 val_nll 1.1193 (21.1s) | GPU đỉnh 5.28 GiB
+  dừng sớm
+  best epoch 3
+  temperature T = 1.4493
+  far-OOD (AUROC, FPR95, energy_ts): {'breastmnist_224': (0.1592, 1.0), 'pneumoniamnist_224': (0.6794, 0.9567), 'retinamnist_224': (0.8426, 0.585)}
+  đối chứng xám (AUROC, FPR95, energy_ts): 0.7481 0.8431
+  đã lưu chi tiết vào /kaggle/working/ma21_bcn20000/v3/outputs/seed1
+  ID test (sau TS): {'acc': 0.6752, 'bal_acc': 0.553, 'nll': 0.8705, 'brier': 0.4458, 'ece': 0.0288}
+  OOD (AUROC, FPR95): {'msp_raw': (0.5943, 0.8969), 'msp_ts': (0.6063, 0.8915), 'energy_raw': (0.6511, 0.8792), 'energy_ts': (0.6532, 0.8874), 'mc_msp': (0.6068, 0.8833)}
+seed 3: train 8284, val 1193, id_test 2199, ood 737, lớp ID ['BCC', 'BKL', 'DF', 'MEL', 'NV', 'SCC', 'VASC']
+  epoch 00 train_loss 1.2988 val_nll 1.0862 (40.5s) | GPU đỉnh 5.28 GiB
+  epoch 01 train_loss 0.7394 val_nll 0.9401 (21.8s) | GPU đỉnh 5.28 GiB
+  epoch 02 train_loss 0.5565 val_nll 0.9584 (21.6s) | GPU đỉnh 5.28 GiB
+  epoch 03 train_loss 0.3925 val_nll 1.0071 (21.2s) | GPU đỉnh 5.28 GiB
+  epoch 04 train_loss 0.3380 val_nll 0.9963 (21.3s) | GPU đỉnh 5.28 GiB
+  epoch 05 train_loss 0.3048 val_nll 1.0901 (21.4s) | GPU đỉnh 5.28 GiB
+  epoch 06 train_loss 0.2293 val_nll 1.1184 (21.5s) | GPU đỉnh 5.28 GiB
+  dừng sớm
+  best epoch 1
+  temperature T = 1.0879
+  far-OOD (AUROC, FPR95, energy_ts): {'breastmnist_224': (0.9033, 0.6346), 'pneumoniamnist_224': (0.893, 0.8093), 'retinamnist_224': (0.9551, 0.34)}
+  đối chứng xám (AUROC, FPR95, energy_ts): 0.7321 0.8604
+  đã lưu chi tiết vào /kaggle/working/ma21_bcn20000/v3/outputs/seed3
+  ID test (sau TS): {'acc': 0.6289, 'bal_acc': 0.5154, 'nll': 1.033, 'brier': 0.5144, 'ece': 0.0502}
+  OOD (AUROC, FPR95): {'msp_raw': (0.5946, 0.9267), 'msp_ts': (0.5982, 0.9308), 'energy_raw': (0.6284, 0.9525), 'energy_ts': (0.628, 0.9512), 'mc_msp': (0.5982, 0.9281)}

@@ -1,0 +1,6 @@
+,pred_BCC,pred_BKL,pred_MEL,pred_NV,pred_SCC
+true_BCC,130,6,1,8,24
+true_BKL,2,38,0,5,4
+true_MEL,0,5,1,3,0
+true_NV,4,5,2,38,0
+true_SCC,26,2,0,0,15

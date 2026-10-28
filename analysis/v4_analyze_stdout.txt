@@ -1,0 +1,84 @@
+== v2: 3 seed [0, 1, 2] | cấu hình: BACKBONE=effb0 EPOCHS=12 PATIENCE=3 HOLDOUT=['AK']
+== v3: 5 seed [0, 1, 2, 3, 4] | cấu hình: BACKBONE=effb0 EPOCHS=30 PATIENCE=5 HOLDOUT=['AK']
+== v4: 5 seed [0, 1, 2, 3, 4] | cấu hình: BACKBONE=convnext_t EPOCHS=30 PATIENCE=5 HOLDOUT=['AK']
+
+== Đối chiếu ghép cặp theo seed (diff, CI 95%, p):
+run                                                      contrast  n    diff   ci_lo   ci_hi      p
+ v2                            far breastmnist_224 − xám [msp_ts]  3 -0.0029 -0.1508  0.1450 0.9413
+ v2                         far pneumoniamnist_224 − xám [msp_ts]  3  0.0961 -0.1583  0.3506 0.2455
+ v2                            far retinamnist_224 − xám [msp_ts]  3  0.2253  0.0706  0.3801 0.0246
+ v2                         far breastmnist_224 − xám [energy_ts]  3 -0.1529 -0.4437  0.1379 0.1521
+ v2                      far pneumoniamnist_224 − xám [energy_ts]  3 -0.0324 -0.4214  0.3566 0.7543
+ v2                         far retinamnist_224 − xám [energy_ts]  3  0.2937  0.0244  0.5630 0.0426
+ v2                                  xám (ID): energy_ts − msp_ts  3  0.0623 -0.0888  0.2133 0.2182
+ v3                            far breastmnist_224 − xám [msp_ts]  5 -0.0438 -0.3466  0.2590 0.7087
+ v3                         far pneumoniamnist_224 − xám [msp_ts]  5  0.0157 -0.1222  0.1536 0.7674
+ v3                            far retinamnist_224 − xám [msp_ts]  5  0.1805  0.0734  0.2876 0.0094
+ v3                         far breastmnist_224 − xám [energy_ts]  5 -0.1623 -0.5244  0.1997 0.2811
+ v3                      far pneumoniamnist_224 − xám [energy_ts]  5 -0.0321 -0.1699  0.1057 0.5532
+ v3                         far retinamnist_224 − xám [energy_ts]  5  0.2224  0.0836  0.3611 0.0112
+ v3                                  xám (ID): energy_ts − msp_ts  5  0.0695  0.0105  0.1286 0.0308
+ v4                            far breastmnist_224 − xám [msp_ts]  5 -0.1469 -0.4514  0.1577 0.2517
+ v4                  far breastmnist_224 màu − thang xám [msp_ts]  5  0.0000  0.0000  0.0000    NaN
+ v4                         far pneumoniamnist_224 − xám [msp_ts]  5 -0.0246 -0.1509  0.1018 0.6176
+ v4               far pneumoniamnist_224 màu − thang xám [msp_ts]  5  0.0000  0.0000  0.0000    NaN
+ v4                            far retinamnist_224 − xám [msp_ts]  5  0.2167  0.0451  0.3883 0.0248
+ v4                  far retinamnist_224 màu − thang xám [msp_ts]  5  0.0338 -0.1591  0.2267 0.6524
+ v4                         far breastmnist_224 − xám [energy_ts]  5 -0.2255 -0.4764  0.0255 0.0672
+ v4               far breastmnist_224 màu − thang xám [energy_ts]  5  0.0000  0.0000  0.0000    NaN
+ v4                      far pneumoniamnist_224 − xám [energy_ts]  5 -0.0689 -0.2059  0.0681 0.2353
+ v4            far pneumoniamnist_224 màu − thang xám [energy_ts]  5  0.0000  0.0000  0.0000    NaN
+ v4                         far retinamnist_224 − xám [energy_ts]  5  0.2159  0.0380  0.3939 0.0281
+ v4               far retinamnist_224 màu − thang xám [energy_ts]  5 -0.0399 -0.1769  0.0971 0.4640
+ v4                              far breastmnist_224 − xám [maha]  5  0.0630  0.0101  0.1160 0.0297
+ v4                    far breastmnist_224 màu − thang xám [maha]  5  0.0000  0.0000  0.0000    NaN
+ v4                           far pneumoniamnist_224 − xám [maha]  5  0.0654  0.0040  0.1268 0.0417
+ v4                 far pneumoniamnist_224 màu − thang xám [maha]  5  0.0000  0.0000  0.0000    NaN
+ v4                              far retinamnist_224 − xám [maha]  5  0.0642 -0.0029  0.1314 0.0567
+ v4                    far retinamnist_224 màu − thang xám [maha]  5  0.0007 -0.0056  0.0071 0.7720
+ v4                               far breastmnist_224 − xám [knn]  5  0.0447 -0.0640  0.1533 0.3171
+ v4                     far breastmnist_224 màu − thang xám [knn]  5  0.0000  0.0000  0.0000    NaN
+ v4                            far pneumoniamnist_224 − xám [knn]  5  0.0881  0.0329  0.1433 0.0114
+ v4                  far pneumoniamnist_224 màu − thang xám [knn]  5  0.0000  0.0000  0.0000    NaN
+ v4                               far retinamnist_224 − xám [knn]  5  0.1450  0.0429  0.2471 0.0169
+ v4                     far retinamnist_224 màu − thang xám [knn]  5 -0.0047 -0.0124  0.0031 0.1686
+ v4                         far breastmnist_224: maha − energy_ts  5  0.6121  0.3557  0.8685 0.0027
+ v4                          far breastmnist_224: knn − energy_ts  5  0.5034  0.2743  0.7325 0.0037
+ v4         far breastmnist_224: maha − mức thấp [sat_high_is_id]  5 -0.0086 -0.0268  0.0097 0.2616
+ v4    far breastmnist_224: energy_ts − mức thấp [sat_high_is_id]  5 -0.6207 -0.8690 -0.3724 0.0023
+ v4         far breastmnist_224: maha − mức thấp [grad_low_is_id]  5  0.0420  0.0229  0.0610 0.0036
+ v4    far breastmnist_224: energy_ts − mức thấp [grad_low_is_id]  5 -0.5701 -0.8181 -0.3222 0.0031
+ v4                      far pneumoniamnist_224: maha − energy_ts  5  0.4578  0.2981  0.6175 0.0013
+ v4                       far pneumoniamnist_224: knn − energy_ts  5  0.3902  0.2406  0.5399 0.0019
+ v4      far pneumoniamnist_224: maha − mức thấp [sat_high_is_id]  5 -0.0063 -0.0149  0.0024 0.1136
+ v4 far pneumoniamnist_224: energy_ts − mức thấp [sat_high_is_id]  5 -0.4641 -0.6232 -0.3050 0.0013
+ v4      far pneumoniamnist_224: maha − mức thấp [grad_low_is_id]  5  0.2777  0.2571  0.2984 0.0000
+ v4 far pneumoniamnist_224: energy_ts − mức thấp [grad_low_is_id]  5 -0.1801 -0.3396 -0.0205 0.0351
+ v4                         far retinamnist_224: maha − energy_ts  5  0.1719  0.0390  0.3047 0.0229
+ v4                          far retinamnist_224: knn − energy_ts  5  0.1623  0.0358  0.2888 0.0235
+ v4         far retinamnist_224: maha − mức thấp [sat_high_is_id]  5  0.8892  0.8817  0.8966 0.0000
+ v4    far retinamnist_224: energy_ts − mức thấp [sat_high_is_id]  5  0.7173  0.5837  0.8508 0.0001
+ v4         far retinamnist_224: maha − mức thấp [grad_low_is_id]  5  0.7702  0.7583  0.7821 0.0000
+ v4    far retinamnist_224: energy_ts − mức thấp [grad_low_is_id]  5  0.5983  0.4726  0.7240 0.0002
+ v4                             OOD lớp giữ lại: maha − energy_ts  5 -0.1135 -0.2249 -0.0020 0.0475
+ v4                              OOD lớp giữ lại: knn − energy_ts  5 -0.0122 -0.0753  0.0508 0.6185
+ v4                                  xám (ID): energy_ts − msp_ts  5  0.0744  0.0125  0.1363 0.0289
+
+== So với lần đầu tiên, trên seed chung:
+reference other seeds          metric  n  diff_other_minus_ref   ci_lo  ci_hi      p
+       v2    v3 0,1,2          ts_ece  3                0.0004 -0.0226 0.0233 0.9525
+       v2    v3 0,1,2          ts_nll  3               -0.0076 -0.0490 0.0338 0.5130
+       v2    v3 0,1,2          ts_acc  3               -0.0019 -0.0274 0.0235 0.7737
+       v2    v3 0,1,2      ts_bal_acc  3               -0.0102 -0.1002 0.0798 0.6749
+       v2    v3 0,1,2         raw_ece  3                0.0023 -0.0275 0.0320 0.7758
+       v2    v3 0,1,2         raw_nll  3               -0.0088 -0.0917 0.0741 0.6930
+       v2    v3 0,1,2 auroc_energy_ts  3                0.0058 -0.0506 0.0622 0.7019
+       v2    v4 0,1,2          ts_ece  3                0.0029 -0.0502 0.0559 0.8380
+       v2    v4 0,1,2          ts_nll  3                0.0577 -0.1098 0.2253 0.2763
+       v2    v4 0,1,2          ts_acc  3               -0.0215 -0.1018 0.0587 0.3674
+       v2    v4 0,1,2      ts_bal_acc  3               -0.0020 -0.0860 0.0820 0.9269
+       v2    v4 0,1,2         raw_ece  3               -0.0237 -0.0783 0.0308 0.2020
+       v2    v4 0,1,2         raw_nll  3                0.0363 -0.1366 0.2091 0.4620
+       v2    v4 0,1,2 auroc_energy_ts  3                0.1066  0.0164 0.1967 0.0366
+
+Đã ghi vào analysis/v4/: summary.csv, contrasts.csv, cross_run.csv

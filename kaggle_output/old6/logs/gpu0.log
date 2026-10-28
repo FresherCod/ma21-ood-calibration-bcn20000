@@ -1,0 +1,85 @@
+Đã giải nén trên máy: /tmp/ma21_local/train
+device: cuda | torch: 2.11.0+cu128 | holdout: ['AK'] | seeds: [0, 2, 4]
+checkpoint: /kaggle/working/ma21_bcn20000/v4/checkpoints | kết quả: /kaggle/working/ma21_bcn20000/v4/outputs
+Đọc và thu nhỏ 12413 ảnh về 256 px vào RAM...
+  đã xong 2000
+  đã xong 4000
+  đã xong 6000
+  đã xong 8000
+  đã xong 10000
+  đã xong 12000
+Xong trong 107s, RAM ~2.44 GB
+far-OOD retinamnist_224: 400 ảnh (từ /tmp/ma21_local/far/retinamnist_224.npz)
+far-OOD pneumoniamnist_224: 624 ảnh (từ /tmp/ma21_local/far/pneumoniamnist_224.npz)
+far-OOD breastmnist_224: 156 ảnh (từ /tmp/ma21_local/far/breastmnist_224.npz)
+Đã đưa ảnh lên cuda: 2.44 GB uint8
+seed 0: train 8167, val 1148, id_test 2361, ood 737, lớp ID ['BCC', 'BKL', 'DF', 'MEL', 'NV', 'SCC', 'VASC']
+Downloading: "https://download.pytorch.org/models/convnext_tiny-983f1562.pth" to /root/.cache/torch/hub/checkpoints/convnext_tiny-983f1562.pth
+  0%|          | 0.00/109M [00:00<?, ?B/s]  5%|▍         | 5.00M/109M [00:00<00:02, 51.5MB/s]  9%|▉         | 10.0M/109M [00:00<00:02, 49.5MB/s] 27%|██▋       | 29.9M/109M [00:00<00:00, 119MB/s]  44%|████▎     | 47.5M/109M [00:00<00:00, 144MB/s] 60%|█████▉    | 65.0M/109M [00:00<00:00, 158MB/s] 75%|███████▌  | 82.1M/109M [00:00<00:00, 165MB/s] 91%|█████████ | 99.4M/109M [00:00<00:00, 170MB/s]100%|██████████| 109M/109M [00:00<00:00, 149MB/s] 
+/tmp/ma21_code/ood_calibration.py:525: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  sched.step()
+  epoch 00 train_loss 1.4956 val_nll 1.2963 (70.0s) | GPU đỉnh 6.60 GiB
+  epoch 01 train_loss 0.9595 val_nll 1.3235 (37.9s) | GPU đỉnh 6.60 GiB
+  epoch 02 train_loss 0.7417 val_nll 1.1650 (39.6s) | GPU đỉnh 6.60 GiB
+  epoch 03 train_loss 0.6600 val_nll 1.1322 (39.6s) | GPU đỉnh 6.60 GiB
+  epoch 04 train_loss 0.4635 val_nll 1.1142 (39.4s) | GPU đỉnh 6.60 GiB
+  epoch 05 train_loss 0.4913 val_nll 1.1582 (39.6s) | GPU đỉnh 6.60 GiB
+  epoch 06 train_loss 0.3070 val_nll 1.3837 (39.4s) | GPU đỉnh 6.60 GiB
+  epoch 07 train_loss 0.2141 val_nll 1.2542 (39.4s) | GPU đỉnh 6.60 GiB
+  epoch 08 train_loss 0.1461 val_nll 1.3478 (39.3s) | GPU đỉnh 6.60 GiB
+  epoch 09 train_loss 0.1123 val_nll 1.4086 (39.4s) | GPU đỉnh 6.60 GiB
+  dừng sớm
+  best epoch 4
+  temperature T = 1.4388
+  far-OOD (AUROC, FPR95, energy_ts): {'breastmnist_224': (0.2799, 1.0), 'pneumoniamnist_224': (0.321, 1.0), 'retinamnist_224': (0.8839, 0.5175)}
+  far-OOD xám (AUROC energy_ts): {'breastmnist_224': 0.2799, 'pneumoniamnist_224': 0.321, 'retinamnist_224': 0.772}
+  đối chứng xám (AUROC, FPR95, energy_ts): 0.5571 0.9661
+  đã lưu chi tiết vào /kaggle/working/ma21_bcn20000/v4/outputs/seed0
+  ID test (sau TS): {'acc': 0.6302, 'bal_acc': 0.5268, 'nll': 0.969, 'brier': 0.5017, 'ece': 0.0466}
+  OOD (AUROC, FPR95): {'msp_raw': (0.5909, 0.8969), 'msp_ts': (0.6157, 0.8969), 'energy_raw': (0.7053, 0.8318), 'energy_ts': (0.7105, 0.8358), 'mc_msp': (0.6168, 0.8915), 'maha': (0.4795, 0.9457), 'knn': (0.6384, 0.9376)}
+seed 2: train 8123, val 1134, id_test 2419, ood 737, lớp ID ['BCC', 'BKL', 'DF', 'MEL', 'NV', 'SCC', 'VASC']
+/tmp/ma21_code/ood_calibration.py:525: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  sched.step()
+  epoch 00 train_loss 1.6114 val_nll 1.2280 (55.5s) | GPU đỉnh 6.60 GiB
+  epoch 01 train_loss 1.1154 val_nll 1.4824 (39.1s) | GPU đỉnh 6.60 GiB
+  epoch 02 train_loss 0.9128 val_nll 1.4837 (39.3s) | GPU đỉnh 6.60 GiB
+  epoch 03 train_loss 0.7479 val_nll 1.1387 (39.2s) | GPU đỉnh 6.60 GiB
+  epoch 04 train_loss 0.6371 val_nll 1.1646 (39.3s) | GPU đỉnh 6.60 GiB
+  epoch 05 train_loss 0.5294 val_nll 1.0214 (39.2s) | GPU đỉnh 6.60 GiB
+  epoch 06 train_loss 0.4027 val_nll 1.1345 (39.3s) | GPU đỉnh 6.60 GiB
+  epoch 07 train_loss 0.2739 val_nll 1.1995 (39.2s) | GPU đỉnh 6.60 GiB
+  epoch 08 train_loss 0.2106 val_nll 1.2289 (39.2s) | GPU đỉnh 6.60 GiB
+  epoch 09 train_loss 0.1950 val_nll 1.1403 (39.2s) | GPU đỉnh 6.60 GiB
+  epoch 10 train_loss 0.1271 val_nll 1.3165 (39.1s) | GPU đỉnh 6.60 GiB
+  dừng sớm
+  best epoch 5
+  temperature T = 1.3911
+  far-OOD (AUROC, FPR95, energy_ts): {'breastmnist_224': (0.1361, 1.0), 'pneumoniamnist_224': (0.5236, 0.9984), 'retinamnist_224': (0.8314, 0.7325)}
+  far-OOD xám (AUROC energy_ts): {'breastmnist_224': 0.1361, 'pneumoniamnist_224': 0.5236, 'retinamnist_224': 0.8786}
+  đối chứng xám (AUROC, FPR95, energy_ts): 0.5767 0.8797
+  đã lưu chi tiết vào /kaggle/working/ma21_bcn20000/v4/outputs/seed2
+  ID test (sau TS): {'acc': 0.6602, 'bal_acc': 0.5713, 'nll': 0.9396, 'brier': 0.4771, 'ece': 0.0279}
+  OOD (AUROC, FPR95): {'msp_raw': (0.5686, 0.8955), 'msp_ts': (0.5845, 0.8942), 'energy_raw': (0.6866, 0.8915), 'energy_ts': (0.6956, 0.8874), 'mc_msp': (0.5848, 0.8942), 'maha': (0.5779, 0.9186), 'knn': (0.676, 0.8792)}
+seed 4: train 8288, val 1182, id_test 2206, ood 737, lớp ID ['BCC', 'BKL', 'DF', 'MEL', 'NV', 'SCC', 'VASC']
+/tmp/ma21_code/ood_calibration.py:525: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  sched.step()
+  epoch 00 train_loss 1.5602 val_nll 1.0571 (55.5s) | GPU đỉnh 6.60 GiB
+  epoch 01 train_loss 1.2085 val_nll 1.1526 (39.4s) | GPU đỉnh 6.60 GiB
+  epoch 02 train_loss 0.9604 val_nll 0.9610 (40.7s) | GPU đỉnh 6.60 GiB
+  epoch 03 train_loss 0.7364 val_nll 0.9619 (39.9s) | GPU đỉnh 6.60 GiB
+  epoch 04 train_loss 0.6091 val_nll 1.1107 (40.2s) | GPU đỉnh 6.60 GiB
+  epoch 05 train_loss 0.4271 val_nll 0.9291 (40.1s) | GPU đỉnh 6.60 GiB
+  epoch 06 train_loss 0.3667 val_nll 1.0415 (40.1s) | GPU đỉnh 6.60 GiB
+  epoch 07 train_loss 0.2578 val_nll 0.9299 (40.0s) | GPU đỉnh 6.60 GiB
+  epoch 08 train_loss 0.2428 val_nll 1.1165 (40.0s) | GPU đỉnh 6.60 GiB
+  epoch 09 train_loss 0.1823 val_nll 1.0069 (40.0s) | GPU đỉnh 6.60 GiB
+  epoch 10 train_loss 0.1117 val_nll 1.0723 (40.0s) | GPU đỉnh 6.60 GiB
+  dừng sớm
+  best epoch 5
+  temperature T = 1.3920
+  far-OOD (AUROC, FPR95, energy_ts): {'breastmnist_224': (0.6297, 0.9936), 'pneumoniamnist_224': (0.6495, 0.9936), 'retinamnist_224': (0.782, 0.94)}
+  far-OOD xám (AUROC energy_ts): {'breastmnist_224': 0.6297, 'pneumoniamnist_224': 0.6495, 'retinamnist_224': 0.8207}
+  đối chứng xám (AUROC, FPR95, energy_ts): 0.5858 0.8912
+  đã lưu chi tiết vào /kaggle/working/ma21_bcn20000/v4/outputs/seed4
+  ID test (sau TS): {'acc': 0.6496, 'bal_acc': 0.5837, 'nll': 0.9574, 'brier': 0.4898, 'ece': 0.0443}
+  OOD (AUROC, FPR95): {'msp_raw': (0.605, 0.8847), 'msp_ts': (0.6149, 0.8847), 'energy_raw': (0.6494, 0.905), 'energy_ts': (0.6505, 0.9159), 'mc_msp': (0.6164, 0.8874), 'maha': (0.5576, 0.9566), 'knn': (0.6151, 0.9403)}

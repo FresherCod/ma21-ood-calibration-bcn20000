@@ -1,0 +1,8 @@
+,pred_BCC,pred_BKL,pred_DF,pred_MEL,pred_NV,pred_SCC,pred_VASC
+true_BCC,415,31,5,16,27,21,8
+true_BKL,21,123,0,23,23,21,7
+true_DF,3,4,6,1,8,3,0
+true_MEL,15,95,1,317,151,6,3
+true_NV,34,77,12,69,599,13,4
+true_SCC,26,18,1,2,2,33,1
+true_VASC,0,0,0,3,1,2,18

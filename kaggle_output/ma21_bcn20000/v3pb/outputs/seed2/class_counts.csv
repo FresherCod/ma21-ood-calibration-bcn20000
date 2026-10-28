@@ -1,0 +1,17 @@
+split,diagnosis,images,lesions
+train,BCC,583,457
+train,BKL,162,138
+train,MEL,36,25
+train,NV,172,151
+train,SCC,138,102
+val,BCC,91,65
+val,BKL,27,20
+val,MEL,6,4
+val,NV,25,22
+val,SCC,17,14
+id_test,BCC,171,130
+id_test,BKL,46,40
+id_test,MEL,10,7
+id_test,NV,47,43
+id_test,SCC,37,29
+ood,AK,730,644

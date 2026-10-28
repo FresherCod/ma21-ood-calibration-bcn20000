@@ -1,0 +1,145 @@
+{
+  "seed": 2,
+  "finished_at": "2026-10-19 07:56:37",
+  "runtime_sec": 352.7,
+  "script_sha256": "e94936f67bc9eae3251e3147eb3b4bbe6911c5e9b86249c3452f49f9f74f8375",
+  "zip_md5_expected": "2293c9c654a3f76d6506a57ad17cddd1",
+  "config": {
+    "SEEDS": [
+      0,
+      2,
+      4,
+      6,
+      8
+    ],
+    "HOLDOUT": [
+      "AK"
+    ],
+    "EPOCHS": 30,
+    "BATCH": 64,
+    "EVAL_BS": 128,
+    "LR": 0.0003,
+    "IMG": 224,
+    "RESIZE": 256,
+    "MC_PASSES": 20,
+    "BOOT": 500,
+    "PATIENCE": 5,
+    "PRETRAINED": true,
+    "NUM_WORKERS": 2,
+    "RESUME": true,
+    "DATA_CSV": "/kaggle/input/datasets/phctrngnh/bcn-odd/bcn_20k_train.csv",
+    "IMAGE_SOURCE": [
+      "dir",
+      "/kaggle/input"
+    ],
+    "CKPT_DIR": "/kaggle/working/ma21_bcn20000/v5g/checkpoints",
+    "OUT": "/kaggle/working/ma21_bcn20000/v5g/outputs",
+    "ZIP_URL": "https://ndownloader.figshare.com/files/45833178",
+    "CSV_URL": "https://ndownloader.figshare.com/files/49291684",
+    "RUN_TAG": "v5g",
+    "FAR_NPZ": [
+      "/kaggle/input/datasets/phctrngnh/bcn20000-farsub/retinamnist_224.npz",
+      "/kaggle/input/datasets/phctrngnh/bcn20000-farsub/pneumoniamnist_224.npz",
+      "/kaggle/input/datasets/phctrngnh/bcn20000-farsub/breastmnist_224.npz",
+      "/kaggle/input/datasets/phctrngnh/bcn20000-farsub/bloodmnist_224.npz",
+      "/kaggle/input/datasets/phctrngnh/bcn20000-farsub/pathmnist_224.npz"
+    ],
+    "FAR_KEY": "test_images",
+    "GRAY_CONTROL": true,
+    "BACKBONE": "effb0",
+    "WD": 0.0001,
+    "LABEL_SMOOTH": 0.0,
+    "KNN_K": 50,
+    "FAR_GRAY": true,
+    "RECOMPUTE": false,
+    "GRAYSCALE": true
+  },
+  "versions": {
+    "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+    "torch": "2.11.0+cu128",
+    "cuda": "12.8",
+    "numpy": "2.1.3",
+    "pandas": "2.3.3",
+    "sklearn": "1.6.1",
+    "pillow": "12.3.0"
+  },
+  "gpus": [
+    "Tesla T4"
+  ],
+  "gpu_peak_gib": 5.573,
+  "n_images": {
+    "train": 8123,
+    "val": 1134,
+    "id_test": 2419,
+    "ood": 737
+  },
+  "classes": [
+    "BCC",
+    "BKL",
+    "DF",
+    "MEL",
+    "NV",
+    "SCC",
+    "VASC"
+  ],
+  "class_index": {
+    "BCC": 0,
+    "BKL": 1,
+    "DF": 2,
+    "MEL": 3,
+    "NV": 4,
+    "SCC": 5,
+    "VASC": 6
+  },
+  "holdout": [
+    "AK"
+  ],
+  "summary": {
+    "temperature": 1.5371222496032715,
+    "best_epoch": 4,
+    "id_metrics_raw": {
+      "acc": 0.6155436130632492,
+      "bal_acc": 0.5530806401219323,
+      "nll": 1.1158134937286377,
+      "brier": 0.5442063808441162,
+      "ece": 0.11455722031190263
+    },
+    "id_metrics_ts": {
+      "acc": 0.6155436130632492,
+      "bal_acc": 0.5530806401219323,
+      "nll": 1.0461137294769287,
+      "brier": 0.5281752347946167,
+      "ece": 0.05163242005249745
+    },
+    "ood": {
+      "msp_raw": {
+        "auroc": 0.5222977524718099,
+        "fpr95": 0.9280868385345997
+      },
+      "msp_ts": {
+        "auroc": 0.5275580083722093,
+        "fpr95": 0.921302578018996
+      },
+      "energy_raw": {
+        "auroc": 0.5296199299642192,
+        "fpr95": 0.926729986431479
+      },
+      "energy_ts": {
+        "auroc": 0.5283861985872809,
+        "fpr95": 0.9335142469470827
+      },
+      "mc_msp": {
+        "auroc": 0.5288374542784593,
+        "fpr95": 0.9253731343283582
+      },
+      "maha": {
+        "auroc": 0.5658045224290065,
+        "fpr95": 0.9294436906377205
+      },
+      "knn": {
+        "auroc": 0.5037404581437208,
+        "fpr95": 0.9226594301221167
+      }
+    }
+  }
+}

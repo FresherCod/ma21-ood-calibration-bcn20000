@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.pt
+*.pth
+checkpoints/
+checkpoint/
+data/
+far_data/
+colab_output/
+.DS_Store
+Thumbs.db

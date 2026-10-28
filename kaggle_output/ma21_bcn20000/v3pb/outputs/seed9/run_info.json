@@ -1,0 +1,147 @@
+{
+  "seed": 9,
+  "finished_at": "2026-10-26 09:48:04",
+  "runtime_sec": 101.7,
+  "script_sha256": "f13889d6b279fadbf569a508b250ab0bf8f0eeb64f71cb69dafa1fc325e4560e",
+  "zip_md5_expected": "2293c9c654a3f76d6506a57ad17cddd1",
+  "config": {
+    "SEEDS": [
+      1,
+      3,
+      5,
+      7,
+      9
+    ],
+    "HOLDOUT": [
+      "AK"
+    ],
+    "EPOCHS": 30,
+    "BATCH": 64,
+    "EVAL_BS": 128,
+    "LR": 0.0003,
+    "IMG": 224,
+    "RESIZE": 256,
+    "MC_PASSES": 20,
+    "BOOT": 500,
+    "PATIENCE": 5,
+    "PRETRAINED": true,
+    "NUM_WORKERS": 2,
+    "RESUME": true,
+    "DATA_CSV": "/tmp/ma21_local/pad_map.csv",
+    "IMAGE_SOURCE": [
+      "dir",
+      "/kaggle/input/datasets/mahdavi1202/skin-cancer"
+    ],
+    "CKPT_DIR": "/kaggle/working/ma21_bcn20000/v3pb/checkpoints",
+    "OUT": "/kaggle/working/ma21_bcn20000/v3pb/outputs",
+    "ZIP_URL": "https://ndownloader.figshare.com/files/45833178",
+    "CSV_URL": "https://ndownloader.figshare.com/files/49291684",
+    "RUN_TAG": "v3pb",
+    "FAR_NPZ": [
+      "/kaggle/input/datasets/phctrngnh/bcn20000-farsub/retinamnist_224.npz",
+      "/kaggle/input/datasets/phctrngnh/bcn20000-farsub/pneumoniamnist_224.npz",
+      "/kaggle/input/datasets/phctrngnh/bcn20000-farsub/breastmnist_224.npz",
+      "/kaggle/input/datasets/phctrngnh/bcn20000-farsub/bloodmnist_224.npz",
+      "/kaggle/input/datasets/phctrngnh/bcn20000-farsub/pathmnist_224.npz"
+    ],
+    "FAR_KEY": "test_images",
+    "GRAY_CONTROL": true,
+    "BACKBONE": "effb0",
+    "WD": 0.0001,
+    "LABEL_SMOOTH": 0.0,
+    "KNN_K": 50,
+    "FAR_GRAY": true,
+    "RECOMPUTE": false,
+    "GRAYSCALE": false,
+    "AUG_BRIGHT": 0.0,
+    "AUG_CONTRAST": 0.0,
+    "BRIGHT_SENS": true,
+    "RES_MATCH": false,
+    "AUG_ROT": 0.0,
+    "DATASET": "pad"
+  },
+  "versions": {
+    "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+    "torch": "2.11.0+cu128",
+    "cuda": "12.8",
+    "numpy": "2.1.3",
+    "pandas": "2.3.3",
+    "sklearn": "1.6.1",
+    "pillow": "13.0.0"
+  },
+  "gpus": [
+    "Tesla T4"
+  ],
+  "gpu_peak_gib": 3.72,
+  "n_images": {
+    "train": 1096,
+    "val": 158,
+    "id_test": 314,
+    "ood": 730
+  },
+  "classes": [
+    "BCC",
+    "BKL",
+    "MEL",
+    "NV",
+    "SCC"
+  ],
+  "class_index": {
+    "BCC": 0,
+    "BKL": 1,
+    "MEL": 2,
+    "NV": 3,
+    "SCC": 4
+  },
+  "holdout": [
+    "AK"
+  ],
+  "summary": {
+    "temperature": 0.6987758278846741,
+    "best_epoch": 1,
+    "id_metrics_raw": {
+      "acc": 0.6592356687898089,
+      "bal_acc": 0.5742420639801036,
+      "nll": 0.8798126578330994,
+      "brier": 0.4935454726219177,
+      "ece": 0.10292054795850458
+    },
+    "id_metrics_ts": {
+      "acc": 0.6592356687898089,
+      "bal_acc": 0.5742420639801036,
+      "nll": 0.8581805229187012,
+      "brier": 0.48892712593078613,
+      "ece": 0.08531017152066278
+    },
+    "ood": {
+      "msp_raw": {
+        "auroc": 0.7361574033679434,
+        "fpr95": 0.7397260273972602
+      },
+      "msp_ts": {
+        "auroc": 0.7233094843381904,
+        "fpr95": 0.7547945205479452
+      },
+      "energy_raw": {
+        "auroc": 0.7060967629351715,
+        "fpr95": 0.8657534246575342
+      },
+      "energy_ts": {
+        "auroc": 0.7167197452229299,
+        "fpr95": 0.8328767123287671
+      },
+      "mc_msp": {
+        "auroc": 0.7221359392723148,
+        "fpr95": 0.7643835616438356
+      },
+      "maha": {
+        "auroc": 0.5084634848617049,
+        "fpr95": 0.9753424657534246
+      },
+      "knn": {
+        "auroc": 0.7794738678998341,
+        "fpr95": 0.7479452054794521
+      }
+    }
+  }
+}

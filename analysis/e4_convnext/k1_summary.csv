@@ -1,0 +1,11 @@
+model,source,bins_used,auroc_within_bins,gt_0_6
+B,bloodmnist_224,40,0.4537841731022955,False
+B,breastmnist_224,10,0.3707401762869562,False
+B,pathmnist_224,50,0.7635715612724275,True
+B,pneumoniamnist_224,50,0.6378142678823626,True
+B,retinamnist_224,20,0.8358836952755785,True
+J,bloodmnist_224,40,0.6124917075527093,True
+J,breastmnist_224,10,0.593304270663874,False
+J,pathmnist_224,50,0.8293090221399365,True
+J,pneumoniamnist_224,50,0.7345031968648039,True
+J,retinamnist_224,20,0.8071994347062389,True
